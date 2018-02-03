@@ -1,4 +1,6 @@
 import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
+
 import javax.swing.*;
 
 public class CalculatorView extends JFrame{
@@ -63,7 +65,7 @@ public double getResult() {
 
 public void setResult(double result){
 	
-	resultField.setText(Double.toString(result));
+	resultField.setText(new DecimalFormat("##.###").format(result));
 	
 }
 

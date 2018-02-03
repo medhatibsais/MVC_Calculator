@@ -32,7 +32,7 @@ public void Mod(double firstNumber,double secondNumber){
 	
 	
 	
-	public void sqrt(double firstNumber){
+	public void MySqrt(double firstNumber){
 		result=Math.sqrt(firstNumber);
 		
 	}

@@ -28,6 +28,7 @@ public class CalculatorController {
 			else if(event.getSource()==view.subButton) model.Subtract(number1, number2);
 			else if(event.getSource()==view.mulButton) model.Multiply(number1, number2);
 			else if(event.getSource()==view.modButton) model.Mod(number1, number2);
+			else if(event.getSource()==view.sqrtButton) model.MySqrt(number1);
 			else model.Divide(number1, number2);
 			
 			view.setResult(model.getResult());
