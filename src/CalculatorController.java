@@ -24,14 +24,14 @@ public class CalculatorController {
 			number1=view.getFirstNumber();
 			number2=view.getSecondNumber();
 		
-			if(event.getSource()==view.addButton) model.Add(number1, number2);
-			else if(event.getSource()==view.subButton) model.Subtract(number1, number2);
-			else if(event.getSource()==view.mulButton) model.Multiply(number1, number2);
-			else if(event.getSource()==view.modButton) model.Mod(number1, number2);
-			else if(event.getSource()==view.sqrtButton) model.MySqrt(number1);
-			else model.Divide(number1, number2);
+			if(event.getSource()==view.addButton) view.setResult(model.Add(number1, number2));
+			else if(event.getSource()==view.subButton)view.setResult( model.Subtract(number1, number2));
+			else if(event.getSource()==view.mulButton)view.setResult( model.Multiply(number1, number2));
+			else if(event.getSource()==view.modButton)view.setResult( model.Mod(number1, number2));
+			else if(event.getSource()==view.sqrtButton)view.setResult( model.MySqrt(number1));
+			else view.setResult(model.Divide(number1, number2));
 			
-			view.setResult(model.getResult());
+			
 			
 			
 			

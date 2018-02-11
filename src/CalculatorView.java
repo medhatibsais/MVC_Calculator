@@ -5,10 +5,10 @@ import javax.swing.*;
 
 public class CalculatorView extends JFrame{
 
-	private JTextField firstNumber=new JTextField(10);
-	private JTextField secondNumber=new JTextField(10);
-	private JTextField resultField=new JTextField(10);
-	private JLabel equal=new JLabel("=");
+	public JTextField firstNumber=new JTextField(10);
+	public JTextField secondNumber=new JTextField(10);
+	public JTextField resultField=new JTextField(10);
+	public JLabel equal=new JLabel("=");
 	public JButton addButton=new JButton("+");
 	public JButton subButton=new JButton("-");
 	public JButton mulButton=new JButton("*");
@@ -47,14 +47,41 @@ public class CalculatorView extends JFrame{
 	
 	
 	public double getFirstNumber(){
+		double res=0;
+		try{
+	res=Double.parseDouble(firstNumber.getText());
+		}
 		
-		return Double.parseDouble(firstNumber.getText());
+		catch(NumberFormatException ex){
+			
+			JOptionPane.showMessageDialog(this, "Please enter a number in the two both fields");
+		
+		}
+	
+		return res;
+	
+		
 	}
 	
 public double getSecondNumber(){
 		
-		return Double.parseDouble(secondNumber.getText());
+	double res=0;
+	try{
+res=Double.parseDouble(secondNumber.getText());
 	}
+	
+	catch(NumberFormatException ex){
+		
+		JOptionPane.showMessageDialog(this, "Please enter a number");
+	
+	}
+
+	return res;
+
+	
+}
+	
+	
 
 
 public double getResult() {
