@@ -1,3 +1,5 @@
+package MedhatAndYazan;
+
 import javax.swing.JOptionPane;
 
 import javafx.scene.control.SplitPane.Divider;
